@@ -1,0 +1,91 @@
+body {
+  background-image: url("../img/desk-img.jfif");
+  background-size: cover;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+div {
+  padding: 0;
+}
+.block {
+  display: flex;
+  flex-direction: column;
+  width: 25rem;
+  background-color: white;
+  box-shadow: 0.2rem 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+}
+
+.list-item {
+  border-color: #aaa;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ddd;
+}
+
+.list-item:hover {
+  background-color: #eee;
+}
+
+.list-item p {
+  font-size: 1.2rem;
+  margin: 0.5rem;
+}
+
+.list-item:first-child {
+  border-top-right-radius: 0.3rem;
+  border-top-left-radius: 0.3rem;
+}
+
+.list-item:last-child {
+  border-bottom-right-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
+}
+
+input[type=checkbox]:checked {
+  box-shadow: 0 0 0.3rem #bbb ;
+}
+
+input[type=checkbox]:checked + p {
+  color: red;
+}
+
+input[type="text"] {
+  width: 80%;
+  margin: 0.5rem;
+}
+input[type="checkbox"] {
+  width: 1rem;
+  margin: 0.5rem;
+}
+
+
+button {
+  width: 2rem;
+  height: 2rem;
+  border-color: transparent;
+  background-color: skyblue;
+  border-radius: 50%;
+  font-weight: bold;
+  color: white;
+  margin: 0.5rem;
+}
+button:hover {
+  background-color: #888;
+}
+
+.date-block {
+  margin: 1rem;
+  margin-top: 5rem;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: #bbb;
+}
+
+.date-block p {
+  color: white;
+  margin: 0.5rem;
+}

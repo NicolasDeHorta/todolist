@@ -1,0 +1,22 @@
+<%- include("header") -%>
+
+<div class="date-block block">
+  <p> <%= todayName %> <%= todayNum %>, <%= todayMonthName %> </p>
+</div>
+
+<div class="main-block block">
+
+<% for ( let item of mainList) {%>
+    <div class="list-item">
+      <p> <input type="checkbox"> <%= item %> </p>
+    </div>
+<%}%>
+<div class="list-item">
+  <form action="/" method="post">
+    <input type="text" name="newItem" autocomplete="off" placeholder="Enter new task" autofocus="true"> <button class="" type="submit" name="button" value="main">+</button>
+  </form>
+</div>
+
+</div>
+
+<%- include("footer") -%>
