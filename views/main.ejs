@@ -1,19 +1,23 @@
 <%- include("header") -%>
 
 <div class="date-block block">
-  <p> <%= todayName %> <%= todayNum %>, <%= todayMonthName %> </p>
+  <p> <%= listTitle %> </p>
 </div>
 
 <div class="main-block block">
 
-<% for ( let item of mainList) {%>
-    <div class="list-item">
-      <p> <input type="checkbox"> <%= item %> </p>
+<% for ( let item of listItems) {%>
+  <form action="/del" method="post">
+      <div class="list-item">
+      <p> <input type="checkbox" name="checkbox"  value="<%= item._id %>" onChange="this.form.submit()"> <%= item.name %> </p>
     </div>
+    <input type="hidden" name="listName" value="<%= listTitle %>"></input>
+  </form>
 <%}%>
 <div class="list-item">
   <form action="/" method="post">
-    <input type="text" name="newItem" autocomplete="off" placeholder="Enter new task" autofocus="true"> <button class="" type="submit" name="button" value="main">+</button>
+    <input type="text" name="newItem" autocomplete="off" placeholder="Enter new task" autofocus="true">
+    <button class="" type="submit" name="list" value="<%= listTitle %>">+</button>
   </form>
 </div>
 
